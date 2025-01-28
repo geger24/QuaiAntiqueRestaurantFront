@@ -1,6 +1,6 @@
 import Route from "./Route.js";
 
-//Définir ici vos routes
+//Définir ici vos routes = lien, titre, chemin
 export const allRoutes = [
     new Route("/", "Accueil", "/pages/home.html"),
     new Route("/galerie", "La galerie", "/pages/galerie.html"),
@@ -17,6 +17,7 @@ export const allRoutes = [
         "Vos réservations",
         "/pages/reservations/allResa.html"
     ),
+    new Route("/reserver", "Réserver", "/pages/reservations/reserver.html"),
 ];
 
 //Le titre s'affiche comme ceci : Route.titre - websitename
