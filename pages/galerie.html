@@ -20,10 +20,20 @@
                 <img src="../images/food.jpg" class="rounded w-100" />
                 <p class="titre-image">Titre</p>
                 <div class="action-image-buttons">
-                    <button type="button" class="btn btn-outline-light">
+                    <button
+                        type="button"
+                        class="btn btn-outline-light"
+                        data-bs-toggle="modal"
+                        data-bs-target="#EditionPhotoModal"
+                    >
                         <i class="bi bi-pencil-square"></i>
                     </button>
-                    <button type="button" class="btn btn-outline-light">
+                    <button
+                        type="button"
+                        class="btn btn-outline-light"
+                        data-bs-toggle="modal"
+                        data-bs-target="#DeletePhotoModal"
+                    >
                         <i class="bi bi-trash"></i>
                     </button>
                 </div>
@@ -65,7 +75,7 @@
     </div>
 </div>
 
-<!-- Modal -->
+<!-- Modal édition -->
 <div
     class="modal fade"
     id="EditionPhotoModal"
@@ -76,9 +86,9 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="EditionPhotoModalLabel">
+                <h2 class="modal-title fs-5" id="EditionPhotoModalLabel">
                     Edition Photo
-                </h1>
+                </h2>
                 <button
                     type="button"
                     class="btn-close"
@@ -108,8 +118,53 @@
                         />
                     </div>
                     <div class="text-center">
-                        <button type="submit" class="btn btn-primary">
+                        <button type="button" class="btn btn-primary">
                             Enregistrer
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal suppression -->
+<div
+    class="modal fade"
+    id="DeletePhotoModal"
+    tabindex="-1"
+    aria-labelledby="DeletePhotoModalLabel"
+    aria-hidden="true"
+>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title fs-5" id="DeletePhotoModalLabel">
+                    Etes vous sûr de vouloir supprimer cette photo
+                </h2>
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                ></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <p>Titre</p>
+                        <img src="../images/food.jpg" class="rounded w-100" />
+                    </div>
+                    <div class="text-center">
+                        <button type="button" class="btn btn-danger">
+                            Supprimer
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                        >
+                            Annuler
                         </button>
                     </div>
                 </form>
